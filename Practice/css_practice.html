@@ -4,26 +4,44 @@
     <meta charset="UTF-8" />
     <title></title>
     <style>
-      a:link {
+      input[type="radio"]:indeterminate + span {
         color: red;
       }
-      a:visited {
+      input[type="radio"]:checked + span {
+        color: orange;
+      }
+      input[type="checkbox"]:enabled + span {
         color: blue;
       }
-      a:hover {
+      input[type="checkbox"]:disabled + span {
         color: green;
       }
-      a:active {
-        color: gold;
-      }
-      input:focus {
-        color: blueviolet;
+      input[type="checkbox"]:checked + span {
+        color: purple;
       }
     </style>
   </head>
   <body>
-    <h1><a href="https://www.google.co.kr/" target="_blank">잔재미코딩</a></h1>
-    <input type="text" id="data" name="data" /><br />
-    <input type="button" value="Submit" />
+    <div>
+      <h1>Yunny J</h1>
+
+      <a href="https://www.w3schools.com/css/css_boxmodel.asp">잔재미코딩</a>
+      <form
+        action="https://www.w3schools.com/css/css_boxmodel.asp"
+        method="get"
+      >
+        <input type="radio" value="item1" name="item" /><span>item1</span><br />
+        <input type="radio" value="item2" name="item" /><span>item2</span><br />
+        <input type="checkbox" value="check1" name="check" /><span
+          >checkbox1</span
+        ><br />
+        <input type="checkbox" value="check2" name="check" disabled /><span
+          >checkbox2</span
+        ><br />
+
+        <input type="text" id="data" name="data" /><br />
+        <input type="button" value="Submit" />
+      </form>
+    </div>
   </body>
 </html>
